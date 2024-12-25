@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,200;1,300;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init("cJZfrrPMSmtZVgFAk"); // Use the public key directly here
+    })();
+</script>
+
+    <title>Flavorsome Recipes</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Recipe Book</div>
+        <div class="nav-bar">
+        </div>
+    </header>
+    
+    <section id="home">
+        <div class="hero">
+            <div class="content">
+                <h1>Swaad Ki Duniyaan Mein Aapka Swagat Hai!!</h1>
+                <a href="index2.html" class="button">Search Recipe</a>
+            </div>
+        </div>
+    </section>
+    
+
+<section id="cato" class="categories">
+    <h2>Recipe Categories</h2>
+    <div class="category-container">
+        <div class="category-item">
+            <img src="OIP.jpg" alt="Beef">
+            <a href="Beef.html" class="category-btn">Beef</a>
+        </div>
+        <div class="category-item">
+            <img src="OIP (1).jpg" alt="Chicken">
+            <a href="Chicken.html" class="category-btn">Chicken</a>
+        </div>
+        <div class="category-item">
+            <img src="exps187568_SD153320D12_05_1b-2.jpg" alt="Dessert">
+            <a href="Dessert.html" class="category-btn">Dessert</a>
+        </div>
+        <div class="category-item">
+            <img src="OIP (2).jpg" alt="Lamb">
+            <a href="Lamb.html" class="category-btn">Lamb</a>
+        </div>
+        <div class="category-item">
+            <img src="OIP (4).jpg" alt="Pasta">
+            <a href="Pasta.html" class="category-btn">Pasta</a>
+        </div>
+        <div class="category-item">
+            <img src="bone-in-pork-loin.webp" alt="Pork">
+            <a href="Pork.html" class="category-btn">Pork</a>
+        </div>
+        <div class="category-item">
+            <img src="Easy-Honey-Garlic-Shrimp.jpg" alt="Seafood">
+            <a href="Seafood.html" class="category-btn">Seafood</a>
+        </div>
+        <div class="category-item">
+            <img src="OIP (3).jpg" alt="Starter">
+            <a href="Starter.html" class="category-btn">Starter</a>
+        </div>
+        <div class="category-item">
+            <img src="1501013108-shot-2-88.jpg" alt="Vegan">
+            <a href="Vegan.html" class="category-btn">Vegan</a>
+        </div>
+    </div>
+</section>
+
+
+    <button class="scroll-up-btn">
+        <i class="arrow-up"></i>
+    </button>
+
+
+    
+
+    <!------------Contact Section-------------------------->
+    <section id="contact" class="contact"> <!-- Added id here -->
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Address:</strong>
+                DOMBIVALI
+                Thane Maharashtra - 421202</p>
+            <p><strong>Email:</strong>geekynerds16@gmail.com</p>
+        </div>
+        <div class="contact-form">
+            <h2>Contact Form</h2>
+            <form onsubmit="SendMail(event)">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.google.com/" class="social-icon"> <i class="fab fa-google"></i> </a>
+            <a href="https://x.com/?lang=en-in" class="social-icon"> <i class="fab fa-twitter"></i> </a>
+            <a href="https://www.instagram.com/" class="social-icon"> <i class="fab fa-instagram"></i> </a>
+        </div>
+        <h5>Made By:</h5>
+        <h4>Dev Kanojiya, Chinmay Mane, Harsh Hule, Sohan Khachane</h4>
+    </footer>
+
+    <script>
+        const btn = document.querySelector(".scroll-up-btn");
+        btn.addEventListener("click", () =>{
+            document.documentElement.scrollTo({
+                top: 0,
+                behavior: "smooth",
+
+            });
+        });
+    </script>
+    <script src="mailscript.js"></script>
+
+
+</script>
+</body>
+</html>

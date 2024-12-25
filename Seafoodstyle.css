@@ -1,0 +1,243 @@
+/* General Styles */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans',sans-serif;
+}
+
+/* General Styles */
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c7fadf;
+    color: #333;
+}
+
+
+/* Header Section */
+/* Header Section */
+.header {
+    height: 80px; /* Increased height for a more spacious look */
+    width: 100%; /* Full width */
+    background-color: #222121; /* Dark background color */
+    color: #fff; /* White text color */
+    display: flex; /* Flexbox layout for alignment */
+    align-items: center; /* Center items vertically */
+    padding: 0 20px; /* Horizontal padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.container h1 {
+    font-size: 2.5rem; /* Default font size */
+    color: #333;
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+
+.container .button {
+    background: linear-gradient(135deg, #213032, #314e52);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.container .button:hover {
+    background: linear-gradient(135deg, #97a2a3, #213032);
+    color: #fff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .container h1 {
+        font-size: 1.8rem; /* Adjust heading size for mobile */
+        margin-top: 15px;
+    }
+
+    .container .button {
+        font-size: 1rem; /* Adjust button font size */
+        padding: 10px 20px; /* Adjust padding */
+    }
+}
+
+
+.button {
+    background-color: #1b1713; /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none; /* Remove underline from link */
+    border: 2px solid #fff; /* White border for the button */
+    font-weight: bold; /* Bold text for the button */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners for the button */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover */
+}
+
+.button:hover {
+    background-color: #fff; /* Button background on hover */
+    color: #000000; /* Button text color on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+
+
+
+
+/* Recipe Container */
+.recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.recipe {
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.recipe:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.recipe img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 5px solid #e67e22;
+}
+
+.recipe h3 {
+    font-size: 1.5rem;
+    padding: 10px;
+    color: #131313;
+    margin: 0;
+}
+
+.recipe p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    padding: 5px 10px;
+}
+
+.recipe button {
+    width: 80%;
+    padding: 10px;
+    margin: 15px auto;
+    background-color: #39dec8; /* Use a vibrant color */
+    color: white;
+    font-size: 20px;/*1.1rem;  Increase font size */
+    border: none;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Added transition for scale effect */
+}
+
+.recipe button:hover {
+    background-color: #0ba5b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Recipe Popup */
+.recipe-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(132, 249, 234);
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80%; /* Limit height for scrolling */
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    text-align: left;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.recipe-popup h2 {
+    font-size: 2.2rem; /* Increased font size */
+    color: #121212;
+    margin-bottom: 20px;
+}
+
+.recipe-popup h3 {
+    font-size: 1.7rem; /* Increased font size */
+    color: #d91616;
+    margin-bottom: 10px;
+}
+
+.recipe-popup ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.recipe-popup ul li {
+    font-size: 1.1rem; /* Slightly larger font size */
+    color: #7f8c8d;
+}
+
+.recipe-popup p {
+    font-size: 1.1rem; /* Slightly larger font size */
+    color: #34495e;
+    line-height: 1.6;
+}
+
+.recipe-popup .recipe-close-btn {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1rem; /* Increase font size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s; /* Added transition for scale effect */
+}
+
+.recipe-popup .recipe-close-btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .recipe-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recipe {
+        width: 100%;
+    }
+
+    .recipe-popup {
+        width: 90%;
+    }
+}
